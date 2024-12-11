@@ -41,13 +41,21 @@ nav {
 
 }
 
-.hamburg,
-.cancel {
+.hamburg{
   cursor: pointer;
   position: absolute;
   right: 15px;
   top: 10px;
   color: rgb(0, 0, 0);
+  display: none;
+  font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: rgb(255, 255, 255);
   display: none;
   font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
 }
@@ -712,6 +720,7 @@ nav {
   }
 }
 
+
 /* -----------edu&exp--------------------------------------------------------------------------- */
 
 .edu {
@@ -746,6 +755,16 @@ main.row {
   font-family: helvetica;
   color: #0f49d0;
   padding: 0px 0px 20px 30px;
+}
+.edu .title {
+  text-align: center;
+  font-size: 25px;
+  color: #0f49d0;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .col .e_contents {
