@@ -41,7 +41,7 @@ nav {
 
 }
 
-.hamburg{
+.hamburg {
   cursor: pointer;
   position: absolute;
   right: 15px;
@@ -50,6 +50,7 @@ nav {
   display: none;
   font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
 }
+
 .cancel {
   cursor: pointer;
   position: absolute;
@@ -118,10 +119,14 @@ nav {
 .dropdown .links a:hover {
   background-color: #0f49d0;
 }
+
 .logo img {
-  max-width: 150px; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Ensure the image behaves as a block element */
+  max-width: 150px;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain the aspect ratio */
+  display: block;
+  /* Ensure the image behaves as a block element */
 }
 
 
@@ -232,6 +237,7 @@ nav {
   width: 70%;
   height: 6vh;
   margin: 30px;
+ 
   background-color: #0f49d0;
   color: white;
   border: none;
@@ -286,7 +292,7 @@ nav {
     width: 50%;
     height: 60%;
   }
-  
+
 }
 
 @media (max-width: 440px) {
@@ -383,13 +389,16 @@ nav {
     opacity: 1;
   }
 }
+
 /* Ensure the nav bar stays above the video container */
 nav {
   width: 100%;
   height: 10vh;
   position: sticky;
-  top: 0; /* Ensure it's always at the top */
-  z-index: 1000; /* Make sure nav stays on top */
+  top: 0;
+  /* Ensure it's always at the top */
+  z-index: 1000;
+  /* Make sure nav stays on top */
 }
 
 .video-container {
@@ -399,39 +408,48 @@ nav {
   margin: 0 auto 20px;
   overflow: hidden;
   border-radius: 10px;
-  z-index: 1; /* Lower z-index so it's behind the nav */
-  position: relative; /* Ensure it is positioned correctly within its container */
+  z-index: 1;
+  /* Lower z-index so it's behind the nav */
+  position: relative;
+  /* Ensure it is positioned correctly within its container */
 }
 
 /* Fix issue of links being hidden by video on small screens */
 @media (max-width: 884px) {
   .video-container {
-    position: relative; /* Ensure it's not overlapping elements above */
-    z-index: 1; /* Ensure it stays below the navigation */
+    position: relative;
+    /* Ensure it's not overlapping elements above */
+    z-index: 1;
+    /* Ensure it stays below the navigation */
   }
 
   nav {
-    z-index: 1000; /* Ensure the nav stays above */
+    z-index: 1000;
+    /* Ensure the nav stays above */
   }
 }
+
 nav {
   width: 100%;
   height: 10vh;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(5px); /* Add blur effect to the background */
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background to see the blur effect */
+  backdrop-filter: blur(5px);
+  /* Add blur effect to the background */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Semi-transparent background to see the blur effect */
 
 }
 
 .nav-container {
   width: 100%;
-    height: 90%;
-    display: flex
-;
-    align-items: center;
-    justify-content: space-between;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5vh;
+  padding-left: 5vh;
 }
 
 .logo {
@@ -453,50 +471,62 @@ nav {
   text-decoration: none;
   font-weight: 550;
   transition: 0.3s linear;
-  
+
 }
 
 .nav-container .links a:hover::before {
   width: 100%;
 }
+
 nav {
   width: 100%;
   height: 10vh;
-  position: fixed; /* Fixes the navbar position */
+  position: fixed;
+  /* Fixes the navbar position */
   top: 0;
   left: 0;
   z-index: 1000;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.3);
-  
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hide/show */
+
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for hide/show */
 }
 
 .navbar-hidden {
-  transform: translateY(-100%); /* Moves the navbar out of view when hidden */
+  transform: translateY(-100%);
+  /* Moves the navbar out of view when hidden */
 }
+
 nav {
   width: 100%;
   height: 10vh;
-  position: fixed; /* Fixes the navbar position */
+  position: fixed;
+  /* Fixes the navbar position */
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  
-  transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; /* Smooth transition for both transform and blur effect */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Semi-transparent background */
+
+  transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  /* Smooth transition for both transform and blur effect */
 }
 
 .navbar-hidden {
-  transform: translateY(-100%); /* Moves the navbar out of view when hidden */
-  backdrop-filter: none; /* Remove blur effect when navbar is hidden */
+  transform: translateY(-100%);
+  /* Moves the navbar out of view when hidden */
+  backdrop-filter: none;
+  /* Remove blur effect when navbar is hidden */
 }
 
 .navbar-visible {
-  backdrop-filter: blur(5px); /* Apply blur effect when navbar is visible */
+  backdrop-filter: blur(5px);
+  /* Apply blur effect when navbar is visible */
 }
+
 @media (max-width: 380px) {
-  .Home{
+  .Home {
     margin-top: 11%;
   }
 }
@@ -531,7 +561,7 @@ nav {
   grid-template-columns: 2fr 5fr;
   grid-gap: 70px;
   grid-template-areas: 'imageSect infoSect'
-      'skillSect skillSect';
+    'skillSect skillSect';
 }
 
 .about_contents .imageSection {
@@ -605,12 +635,12 @@ nav {
   color: #000000;
   font-size: 15px;
   Line-height: 1.2;
-  
+
   padding-bottom: 8px;
 }
 
 .personalInfo {
-  
+
   margin-top: 14px;
   padding-bottom: 10px;
   border-bottom: 1px solid #000000;
@@ -681,7 +711,7 @@ nav {
   height: 100%;
   background-color: #0f49d0;
   box-shadow: -1px -1px 2px #c5c5c5,
-      1px 1px 2px #c8c8c8;
+    1px 1px 2px #c8c8c8;
   border-radius: 15px;
 }
 
@@ -699,29 +729,30 @@ nav {
 
 @media (max-width: 1068px) {
   .about_container .about_contents {
-      grid-template-areas: 'imageSect skillSect'
-          'infoSect infoSect';
+    grid-template-areas: 'imageSect skillSect'
+      'infoSect infoSect';
   }
 
   .skillSection {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 }
 
 @media (max-width: 868px) {
   .about_container .about_contents {
-      grid-template-areas: 'imageSect imageSect'
-          'infoSect infoSect'
-          'skillSect skillSect';
+    grid-template-areas: 'imageSect imageSect'
+      'infoSect infoSect'
+      'skillSect skillSect';
   }
 }
 
 @media (max-width: 668px) {
   personalInfo {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
+
 /* -----------edu&exp--------------------------------------------------------------------------- */
 
 .edu {
@@ -757,6 +788,7 @@ main.row {
   color: #0f49d0;
   padding: 0px 0px 20px 30px;
 }
+
 .edu .title {
   text-align: center;
   font-size: 25px;
@@ -874,7 +906,7 @@ main.row {
     gap: 3px;
     padding: 65px;
     margin: 25px;
-    
+
   }
 }
 
@@ -1004,9 +1036,11 @@ main.row {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Full height to match the section's size */
+  height: 100%;
+  /* Full height to match the section's size */
   padding: 20px;
-  background-color: #ffffff; /* Optional: set a background color for contrast */
+  background-color: #ffffff;
+  /* Optional: set a background color for contrast */
 }
 
 /* Loader Styling */
@@ -1030,14 +1064,14 @@ main.row {
   border-radius: 8px;
   background: #f5f5f5 no-repeat;
   background-size: 60px 10px;
-  background-image: linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0);
-  background-position: 15px 30px, 15px 60px, 15px 90px, 
-                       105px 30px, 105px 60px, 105px 90px;
+  background-image: linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0);
+  background-position: 15px 30px, 15px 60px, 15px 90px,
+    105px 30px, 105px 60px, 105px 90px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -1051,9 +1085,9 @@ main.row {
   border-radius: 8px;
   background: #ffffff no-repeat;
   background-size: 60px 10px;
-  background-image: linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0), 
-                    linear-gradient(#ddd 100px, transparent 0);
+  background-image: linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0),
+    linear-gradient(#ddd 100px, transparent 0);
   background-position: 50% 30px, 50% 60px, 50% 90px;
   transform: rotateY(0deg);
   transform-origin: left center;
@@ -1074,14 +1108,16 @@ main.row {
 .connect-heading-unique {
   width: 100%;
   text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff; /* Slight blue tone */
+  padding: 35px 0;
+  background-color: #ffffff;
   margin-bottom: 20px;
-  
+  margin-top: 20px;
+
 }
 
 .connect-main-heading-unique {
-  color: #0f49d0; /* Blue color for heading text */
+  color: #0f49d0;
+  /* Blue color for heading text */
   font-size: 32px;
   font-weight: bold;
   margin: 0;
@@ -1090,30 +1126,32 @@ main.row {
 
 @media (max-width: 768px) {
   .connect-main-heading-unique {
-      font-size: 24px; /* Smaller font size for smaller screens */
+    font-size: 24px;
+    /* Smaller font size for smaller screens */
   }
 }
 
 .connect-container-unique {
-  display: flex;
-  flex-wrap: wrap; /* Allows responsive stacking */
+  Display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 61%; /* Reduced width */
+  width: 61%;
   padding: 20px;
-  background-color: #0f49d02d; /* Slight blue tone for container */
+  /* background-color: #0f49d02d; */
   border-radius: 12px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-  gap: 15px; /* Reduced gap between sections */
-  
+  /* box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); */
+  gap: 50px;
   margin-bottom: 6vh;
+  flex-direction: column-reverse;
 }
 
 /* Left Section: Info */
 .connect-left-info-unique {
-  flex: 1 1 45%; /* Proportional width */
+  flex: 1 1 45%;
+  /* Proportional width */
   color: #333;
-  text-align: left;
+  text-align: center;
 }
 
 .connect-title-unique {
@@ -1130,8 +1168,14 @@ main.row {
 }
 
 .connect-list-unique {
+  display: flex;
+  text-align: center;
   list-style-type: none;
   padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .connect-item-unique {
@@ -1164,7 +1208,8 @@ main.row {
 
 /* Right Section: Loader */
 .connect-right-loader-unique {
-  flex: 1 1 45%; /* Proportional width */
+  flex: 1 1 45%;
+  /* Proportional width */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1186,9 +1231,7 @@ main.row {
   top: -40px;
   height: 70px;
   width: 50px;
-  background-image: linear-gradient(#fff 45px, transparent 0),
-                    linear-gradient(#fff 45px, transparent 0),
-                    linear-gradient(#fff 45px, transparent 0);
+  background-image: linear-gradient(#0f49d0 45px, transparent 0), linear-gradient(#0f49d0 45px, transparent 0), linear-gradient(#0f49d0 45px, transparent 0);
   background-repeat: no-repeat;
   background-size: 30px 4px;
   background-position: 0px 11px, 8px 35px, 0px 60px;
@@ -1198,45 +1241,54 @@ main.row {
 /* Responsive Design */
 @media (max-width: 768px) {
   .connect-container-unique {
-      flex-direction: column; /* Stacks the sections vertically */
-      width: 90%; /* Adjust container width for smaller screens */
+    flex-direction: column;
+    /* Stacks the sections vertically */
+    width: 90%;
+    /* Adjust container width for smaller screens */
   }
 
   .connect-right-loader-unique {
-      order: 1; /* Loader on top for smaller screens */
-      width: 100%;
+    order: 1;
+    /* Loader on top for smaller screens */
+    width: 100%;
   }
 
   .connect-left-info-unique {
-      order: 2; /* Info section at the bottom */
-      width: 100%;
+    order: 2;
+    /* Info section at the bottom */
+    width: 100%;
   }
 }
 
 /* Animations */
 @keyframes envFloatingUnique {
   0% {
-      transform: translate(-2px, -5px);
+    transform: translate(-2px, -5px);
   }
+
   100% {
-      transform: translate(0, 5px);
+    transform: translate(0, 5px);
   }
 }
 
 @keyframes envDroppingUnique {
   0% {
-      background-position: 100px 11px, 115px 35px, 105px 60px;
-      opacity: 1;
+    background-position: 100px 11px, 115px 35px, 105px 60px;
+    opacity: 1;
   }
+
   50% {
-      background-position: 0px 11px, 20px 35px, 5px 60px;
+    background-position: 0px 11px, 20px 35px, 5px 60px;
   }
+
   60% {
-      background-position: -30px 11px, 0px 35px, -10px 60px;
+    background-position: -30px 11px, 0px 35px, -10px 60px;
   }
-  75%, 100% {
-      background-position: -30px 11px, -30px 35px, -30px 60px;
-      opacity: 0;
+
+  75%,
+  100% {
+    background-position: -30px 11px, -30px 35px, -30px 60px;
+    opacity: 0;
   }
 }
 
@@ -1331,16 +1383,19 @@ footer {
     justify-content: flex-start;
   }
 }
+
 /* =---------------------------------------------------------------------------- */
 h3 {
   font-family: sans-serif;
 }
 
 .timeline-container {
-  max-width: 90%; /* Reduced width */
+  max-width: 90%;
+  /* Reduced width */
   margin: 50px auto;
-  padding: 0 20px; /* Added padding to ensure content doesn't touch the edges */
-  
+  padding: 0 20px;
+  /* Added padding to ensure content doesn't touch the edges */
+
 }
 
 .timeline {
@@ -1350,7 +1405,7 @@ h3 {
   list-style: none;
   padding-top: 20px;
   padding-bottom: 20px;
-  
+
 }
 
 .timeline:before {
@@ -1359,7 +1414,7 @@ h3 {
   top: 0;
   bottom: 0;
   bottom: 0;
-    left: 50%;
+  left: 50%;
   width: 1px;
   background-color: #0f49d0;
   /* Initially visible */
@@ -1381,7 +1436,8 @@ h3 {
 
 /* Timeline item hover effect */
 .timeline li:hover {
-  background-color: rgba(15, 73, 208, 0.1); /* Light background */
+  background-color: rgba(15, 73, 208, 0.1);
+  /* Light background */
   cursor: pointer;
 }
 
@@ -1429,56 +1485,67 @@ h3 {
 /* Responsive layout */
 @media (max-width: 768px) {
   .timeline {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .timeline li {
-      width: 100%; /* Full width on smaller screens */
-      text-align: left; /* Align text to the left */
-      padding: 15px 30px; /* Adjust padding for smaller screens */
+    width: 100%;
+    /* Full width on smaller screens */
+    text-align: left;
+    /* Align text to the left */
+    padding: 15px 30px;
+    /* Adjust padding for smaller screens */
   }
 
   .timeline li:nth-child(2n) {
-      align-self: flex-start; /* Align alternating items on left */
+    align-self: flex-start;
+    /* Align alternating items on left */
   }
 
   /* Hide the vertical line on smaller screens */
   .timeline:before {
-      display: none;
+    display: none;
   }
 
   /* Adjust font size for smaller screens */
   .timeline h3 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .timeline p {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .timeline-container {
-      padding: 20px; /* More padding on smaller screens */
-      padding-right: 6%;
+    padding: 20px;
+    /* More padding on smaller screens */
+    padding-right: 6%;
     padding-left: 6%;
   }
 
   .timeline h3 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .timeline p {
-      font-size: 16px;
+    font-size: 16px;
   }
-}.timeline-heading {
+}
+
+.timeline-heading {
   text-align: center;
   font-size: 36px;
-  color: #0f49d0; /* Blue color for the text */
+  color: #0f49d0;
+  /* Blue color for the text */
   margin-bottom: 20px;
-  font-family: 'Helvetica', sans-serif; /* Clean sans-serif font */
-  font-weight: bold; /* Make it bold */
-  text-transform: uppercase; /* Uppercase for a more structured look */
+  font-family: 'Helvetica', sans-serif;
+  /* Clean sans-serif font */
+  font-weight: bold;
+  /* Make it bold */
+  text-transform: uppercase;
+  /* Uppercase for a more structured look */
   position: relative;
 }
 
@@ -1513,8 +1580,10 @@ h3 {
 }
 
 .project-left img:hover {
-  transform: scale(1.05);  /* Slightly zoom in the image */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.05);
+  /* Slightly zoom in the image */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  /* Increase shadow on hover */
 }
 
 .project-right {
@@ -1595,6 +1664,7 @@ h3 {
 .project-github img:hover {
   transform: scale(1.1);
 }
+
 /* Add a small blue blinking dot with glowing effect in front of the project name */
 .project-name h2 {
   display: flex;
@@ -1603,25 +1673,32 @@ h3 {
   color: #333;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
-  justify-content: flex-start; /* Align to the left */
-  position: relative; /* For positioning the dot */
+  justify-content: flex-start;
+  /* Align to the left */
+  position: relative;
+  /* For positioning the dot */
   justify-content: flex-end;
 }
 
 .project-name h2::before {
-  display: flex
-  ;
-      content: '';
-      position: relative;
-      /* top: 46%; */
-      margin-top: 4%;
-      margin-right: 4%;
-  transform: translateY(-50%); /* Center the dot vertically */
-  width: 10px; /* Dot size */
-  height: 10px; /* Dot size */
-  border-radius: 50%; /* Make it circular */
-  background-color: #007BFF; /* Blue color */
-  animation: blink 1s infinite, glow 1.5s ease-in-out infinite alternate; /* Blinking and glowing effect */
+  display: flex;
+  content: '';
+  position: relative;
+  /* top: 46%; */
+  margin-top: 4%;
+  margin-right: 4%;
+  transform: translateY(-50%);
+  /* Center the dot vertically */
+  width: 10px;
+  /* Dot size */
+  height: 10px;
+  /* Dot size */
+  border-radius: 50%;
+  /* Make it circular */
+  background-color: #007BFF;
+  /* Blue color */
+  animation: blink 1s infinite, glow 1.5s ease-in-out infinite alternate;
+  /* Blinking and glowing effect */
 }
 
 
@@ -1631,9 +1708,11 @@ h3 {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -1644,6 +1723,7 @@ h3 {
   0% {
     box-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF;
   }
+
   100% {
     box-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF, 0 0 30px #007BFF;
   }
@@ -1702,6 +1782,7 @@ h3 {
     width: 35px;
     height: 35px;
   }
+
   .project-name h2::before {
     margin-top: 2%;
   }
@@ -1711,7 +1792,8 @@ h3 {
 /* For Tablets (up to 1100px) */
 @media screen and (max-width: 1100px) {
   .project-container {
-    width: 80%; /* Make the container a bit wider to improve alignment */
+    width: 80%;
+    /* Make the container a bit wider to improve alignment */
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -1721,22 +1803,25 @@ h3 {
   .project-right {
     flex: none;
     width: 100%;
-    padding: 10px 15px; /* Reduced padding for better alignment */
+    padding: 10px 15px;
+    /* Reduced padding for better alignment */
   }
 
   .project-left img {
-    width: 100%; /* Adjust image width for better alignment */
+    width: 100%;
+    /* Adjust image width for better alignment */
     height: auto;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
+    /* Center the image */
   }
 
   .project-name h2 {
-    display: flex
-    ;
-            font-size: 22px;
-            text-align: center;
-            margin-bottom: 15px;
-            justify-content: center;}
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
 
   .project-info {
     width: 90%;
@@ -1764,10 +1849,12 @@ h3 {
     width: 35px;
     height: 35px;
   }
+
   .project-name h2::before {
     margin-top: 2%;
   }
 }
+
 @media screen and (max-width: 770px) {
   .project-container {
     width: 100%;
@@ -1815,8 +1902,9 @@ h3 {
     width: 30px;
     height: 30px;
   }
+
   .project-name h2::before {
-    margin-top: 2%;
+    margin-top: 4%;
   }
 }
 
@@ -1844,11 +1932,13 @@ h3 {
 
 /* Swap the order of the left and right sections */
 .project-left-2 {
-  order: 2; /* Move this section to the second position */
+  order: 2;
+  /* Move this section to the second position */
 }
 
 .project-right-2 {
-  order: 1; /* Move this section to the first position */
+  order: 1;
+  /* Move this section to the first position */
 }
 
 .project-left-2 img {
@@ -1860,8 +1950,10 @@ h3 {
 }
 
 .project-left-2 img:hover {
-  transform: scale(1.05);  /* Slightly zoom in the image */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.05);
+  /* Slightly zoom in the image */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  /* Increase shadow on hover */
 }
 
 .project-right-2 {
@@ -1880,7 +1972,7 @@ h3 {
   letter-spacing: 0.5px;
   justify-content: flex-start;
   position: relative;
-  
+
 }
 
 .project-info-2 {
@@ -1952,12 +2044,18 @@ h3 {
   position: relative;
   margin-top: 4%;
   margin-right: 4%;
-  transform: translateY(-50%); /* Center the dot vertically */
-  width: 10px; /* Dot size */
-  height: 10px; /* Dot size */
-  border-radius: 50%; /* Make it circular */
-  background-color: #007BFF; /* Blue color */
-  animation: blink-2 1s infinite, glow-2 1.5s ease-in-out infinite alternate; /* Blinking and glowing effect */
+  transform: translateY(-50%);
+  /* Center the dot vertically */
+  width: 10px;
+  /* Dot size */
+  height: 10px;
+  /* Dot size */
+  border-radius: 50%;
+  /* Make it circular */
+  background-color: #007BFF;
+  /* Blue color */
+  animation: blink-2 1s infinite, glow-2 1.5s ease-in-out infinite alternate;
+  /* Blinking and glowing effect */
 }
 
 /* Blinking animation */
@@ -1965,9 +2063,11 @@ h3 {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -1978,6 +2078,7 @@ h3 {
   0% {
     box-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF;
   }
+
   100% {
     box-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF, 0 0 30px #007BFF;
   }
@@ -1986,7 +2087,8 @@ h3 {
 @media screen and (max-width: 768px) {
   .project-container-2 {
     width: 90%;
-    flex-direction: column-reverse; /* Reverses the order */
+    flex-direction: column-reverse;
+    /* Reverses the order */
     align-items: center;
     padding: 20px;
   }
@@ -2043,7 +2145,8 @@ h3 {
 @media screen and (max-width: 1100px) {
   .project-container-2 {
     width: 80%;
-    flex-direction: column-reverse; /* Reverses the order */
+    flex-direction: column-reverse;
+    /* Reverses the order */
     align-items: center;
     padding: 20px;
   }
@@ -2104,7 +2207,8 @@ h3 {
 @media screen and (max-width: 770px) {
   .project-container-2 {
     width: 100%;
-    flex-direction: column-reverse; /* Reverses the order */
+    flex-direction: column-reverse;
+    /* Reverses the order */
     align-items: center;
     padding: 10px;
   }
@@ -2150,9 +2254,10 @@ h3 {
   }
 
   .project-name-2 h2::before {
-    margin-top: 2%;
+    margin-top: 4%;
   }
 }
+
 .projects-heading {
   text-align: center;
   margin-bottom: 40px;
@@ -2160,7 +2265,7 @@ h3 {
 
 .projects-heading h1 {
   font-size: 36px;
-  color: #333;
+  color: #0f49d0;
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -2171,6 +2276,7 @@ h3 {
   color: #555;
   line-height: 1.6;
 }
+
 @media screen and (max-width: 768px) {
   .projects-heading h1 {
     font-size: 28px;
