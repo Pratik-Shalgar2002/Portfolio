@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
@@ -20,6 +20,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <!-- AOS JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
 
   <title>Pratik Shalgar</title>
 </head>
@@ -49,7 +50,11 @@
         <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
           <a href="#MyContact"><i class="fas fa-envelope"></i></a>
         </div>
+        <div class="link" id="theme-toggle" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+          <a><i class="fa-solid fa-lightbulb"></i></i></a>
+        </div>
       </div>
+
       <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
     </div>
     <div class="dropdown">
@@ -59,9 +64,11 @@
         <a href="#MyEducation">Education</a>
         <a href="#MyExperience">Experience</a>
         <a href="#MyProjects">Projects</a>
-        <a href="#MyContact">Contact</a>
+        <a href="javascript:void(0);" id="theme-toggle-dropdown"><i class="fa-solid fa-lightbulb"></i></a> <!-- Dropdown nav theme toggle -->
         <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
       </div>
+    </div>
+    
     </div>
   </nav>
   <!-- --------------------------------------------------------------------------------------------- -->
@@ -136,7 +143,7 @@
         <div class="skill">
           <div class="subject">Hard Work</div>
           <div class="progress_bar">
-            <div class="progress_line" value='94%' style="max-width: 94%"></div>
+            <div class="progress_line" value='85%' style="max-width: 85%"></div>
           </div>
         </div>
         <div class="skill">
@@ -151,12 +158,17 @@
     </div>
   </div>
 
+  <!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+
 
   <!------------------------------ -->
 
   <div class="edu" id="MyEducation">
     <header class="title">
-      <h2>EDUCATION</h2>
+      <h2 class="timeline-heading">Education</h2>
     </header>
 
     <main class="row">
@@ -247,10 +259,32 @@
 
     </ul>
   </div>
+  <!-- ==================================================================================== -->
+
+  <h2 class="timeline-heading" data-aos="fade-down" data-aos-duration="1000">Certificate</h2>
+
+  <div class="certificate-slider">
+    <div class="slider-container-unique" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="slider-unique">
+        <div class="card-1" data-aos="fade-up" data-aos-duration="1200">
+          <img src="./Certificate/CodSoft.jpg" alt="Card 1" class="img-card-1" />
+        </div>
+        <div class="card-2" data-aos="fade-up" data-aos-duration="1200">
+          <img src="./Certificate/TCR Innovation.png" alt="Card 2" class="img-card-2" />
+        </div>
+        
+      </div>
+    </div>
+  
+    <!-- Navigation Arrows inside certificate-slider -->
+    <button class="left-arrow-unique" data-aos="fade-up" data-aos-duration="1000">◀</button>
+    <button class="right-arrow-unique" data-aos="fade-up" data-aos-duration="1000">▶</button>
+  </div>
+
   <!-- ------------------------------------------------------------------------------------------------------------------ -->
 
   <div class="projects-heading" id="MyProjects">
-    <h1>My Projects</h1>
+    <h2 class="timeline-heading">Projects</h2>
     <p>A showcase of my work using various technologies and frameworks.</p>
   </div>
 

@@ -216,3 +216,116 @@ redirectItems.forEach(item => {
     window.location.href = url;
   });
 });
+// Select relevant elements with unique names
+const cards = document.querySelectorAll('.card-1, .card-2, .card-3, .card-4, .card-5');
+const totalCards = cards.length;
+const leftArrow = document.querySelector('.left-arrow-unique');
+const rightArrow = document.querySelector('.right-arrow-unique');
+
+let currentIndex = 0; // Index of the active center card
+let slideInterval;
+const intervalTime = 3000; // Auto-slide interval in ms (3 seconds)
+
+// Function to update card positions
+function updateCardPositions() {
+  cards.forEach((card, index) => {
+    const offset = index - currentIndex;
+
+    // Calculate position for each card
+    let zIndex = -Math.abs(offset); // Lower z-index for cards farther from center
+    let scale = 1 - Math.abs(offset) * 0.2; // Scale down non-center cards
+    let translateX = offset * 300; // Horizontal spacing
+
+    // Center card styles
+    if (offset === 0) {
+      zIndex = 10;
+      scale = 1;
+      card.style.opacity = 1;
+    } else {
+      card.style.opacity = 0.1; // Dim non-center cards
+    }
+
+    // Apply transforms
+    card.style.transform = `translateX(${translateX}px) scale(${scale})`;
+    card.style.zIndex = zIndex;
+  });
+}
+
+// Move to the next card
+function moveToNextCard() {
+  currentIndex = (currentIndex + 1) % totalCards;
+  updateCardPositions();
+}
+
+// Move to the previous card
+function moveToPreviousCard() {
+  currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+  updateCardPositions();
+}
+
+// Auto-slide functionality
+function startAutoSlide() {
+  slideInterval = setInterval(moveToNextCard, intervalTime);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+}
+
+// Event Listeners
+rightArrow.addEventListener('click', () => {
+  moveToNextCard();
+  stopAutoSlide();
+  startAutoSlide();
+});
+
+leftArrow.addEventListener('click', () => {
+  moveToPreviousCard();
+  stopAutoSlide();
+  startAutoSlide();
+});
+
+// Pause auto-slide on hover
+cards.forEach((card) => {
+  card.addEventListener('mouseover', stopAutoSlide);
+  card.addEventListener('mouseout', startAutoSlide);
+});
+
+// Initialize positions and auto-slide
+updateCardPositions();
+startAutoSlide();
+
+
+const themeToggleButton = document.getElementById("theme-toggle");
+
+themeToggleButton.addEventListener("click", () => {
+  // Toggle the dark-mode class on the body
+  document.body.classList.toggle("dark-mode");
+
+  // Update the icon based on the current mode
+  const currentMode = document.body.classList.contains("dark-mode") 
+    ? '<i class="fa-regular fa-lightbulb"></i>'  // Lightbulb on for dark mode
+    : '<i class="fa-solid fa-lightbulb"></i>'; // Lightbulb off for light mode
+
+  themeToggleButton.querySelector('a').innerHTML = currentMode;
+});
+const themeToggleDropdownButton = document.getElementById("theme-toggle-dropdown");
+themeToggleDropdownButton.addEventListener("click", () => {
+  // Toggle the dark-mode class on the body
+  document.body.classList.toggle("dark-mode");
+
+  // Update the icon based on the current mode
+  const currentMode = document.body.classList.contains("dark-mode") 
+    ? '<i class="fa-regular fa-lightbulb"></i>'  // Lightbulb on for dark mode
+    : '<i class="fa-solid fa-lightbulb"></i>'; // Lightbulb off for light mode
+
+  themeToggleDropdownButton.innerHTML = currentMode;  // Update the content of the <a> tag
+});
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-animation'), // Div to render the animation
+  renderer: 'svg',        // Format: 'svg', 'canvas', or 'html'
+  loop: true,             // Animation will loop (true/false)
+  autoplay: true,         // Start automatically (true/false)
+  path: './img/Business Ideas.json' // Path to your JSON file
+});
