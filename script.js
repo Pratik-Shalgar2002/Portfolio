@@ -322,10 +322,3 @@ themeToggleDropdownButton.addEventListener("click", () => {
   themeToggleDropdownButton.innerHTML = currentMode;  // Update the content of the <a> tag
 });
 
-lottie.loadAnimation({
-  container: document.getElementById('lottie-animation'), // Div to render the animation
-  renderer: 'svg',        // Format: 'svg', 'canvas', or 'html'
-  loop: true,             // Animation will loop (true/false)
-  autoplay: true,         // Start automatically (true/false)
-  path: './img/Business Ideas.json' // Path to your JSON file
-});
