@@ -1044,6 +1044,8 @@ main.row {
   /* Start with a slight downward offset */
   transition: all 1.5s ease-in-out;
   /* Smooth transition */
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .edu.visible {
