@@ -7,7 +7,7 @@
   --nav-bg-color: #ffffff;
   --nav-text-color: rgb(0, 0, 0);
   --nav-hover-color: #0f49d0;
-  --dropdown-bg-color: rgba(0, 0, 0, 0.57);
+  --dropdown-bg-color: rgba(0, 0, 0, 0.914);
   --dropdown-text-color: #ffffff;
   --dropdown-hover-bg-color: #0f49d0;
   --hamburg-color: rgb(0, 0, 0);
@@ -484,7 +484,7 @@ nav {
   object-fit: cover;
   position: relative;
   z-index: 2;
-  border: 2px solid black; /* Adds a black border */
+  border: 2px solid var(--about-text-color); /* Adds a black border */
 }
 
 
@@ -1348,7 +1348,7 @@ main.row {
 /* =----------------------------------------------------------------- */
 
 :root {
-  --footer-bg-color:  #f4f4f4e4;
+  --footer-bg-color:  #fbfbfbe4;
   --footer-text-color:  #0f49d0 ;
   --footer-link-color:  #000000;
   --footer-link-hover-color: #0f49d0;
@@ -2488,6 +2488,14 @@ h3 {
 body.dark-mode .logo img {
   content: url("./img/logo\ 2.png"); /* Image for dark mode */
 }
+/* Default mode */
+
+
+/* Dark mode */
+body.dark-mode .imageSection .Profile_Image {
+  content: url('./img/My_Photo_2.png'); /* Specify the dark mode image */
+}
+
 body.dark-mode{
 
 --body-bg-color: var(--body-bg-color-dark);
@@ -2495,7 +2503,7 @@ body.dark-mode{
 --nav-bg-color: var(--nav-bg-color-dark);
 --nav-text-color: var(--nav-text-color-dark);
 --nav-hover-color: var(--nav-hover-color-dark);
---dropdown-bg-color: var(--dropdown-bg-color-dark);
+
 --dropdown-text-color: var(--dropdown-text-color-dark);
 --dropdown-hover-bg-color: var(--dropdown-hover-bg-color-dark);
 --hamburg-color: var(--hamburg-color-dark);
