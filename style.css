@@ -766,7 +766,7 @@ main.row {
 }
 .col{
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 .col .e_contents {
   padding: 0px 30px;
