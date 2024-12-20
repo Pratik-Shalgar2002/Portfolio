@@ -477,7 +477,12 @@ nav {
   min-width: 300px;
   height: 380px;
 }
-
+.imageSection {
+  position: relative; /* Ensures child elements can use relative positioning */
+  display: flex; /* Helps align items inside if needed */
+  justify-content: center; /* Ensures image stays centered horizontally */
+  align-items: center; /* Centers image vertically if needed */
+}
 .imageSection img {
   width: 95%;
   height: 100%;
