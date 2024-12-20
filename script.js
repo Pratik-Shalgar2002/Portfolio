@@ -203,6 +203,14 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
   link.click(); // Simulate a click to trigger download
 });
 
+document.getElementById('downloadBtn_2').addEventListener('click', function() {
+  // Create an anchor tag dynamically
+  var link = document.createElement('a');
+  link.href = './img/Pratik_Shalgar_9326540475.pdf'; // Path to your resume
+  link.download = 'Pratik_Shalgar_9326540475.pdf';  // Name the downloaded file
+  link.click(); // Simulate a click to trigger download
+});
+
 // Get all the list items with the class 'redirect'
 const redirectItems = document.querySelectorAll('.redirect');
 

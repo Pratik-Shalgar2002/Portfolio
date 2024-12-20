@@ -21,7 +21,7 @@
   <!-- AOS JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  
+
 
   <title>Pratik Shalgar</title>
 </head>
@@ -66,24 +66,25 @@
         <a href="#MyExperience">Experience</a>
         <a href="#MyProjects">Projects</a>
         <a href="#MyContact">Contact</a>
-        <a href="javascript:void(0);" id="theme-toggle-dropdown"><i class="fa-solid fa-lightbulb"></i></a> <!-- Dropdown nav theme toggle -->
+        <a href="javascript:void(0);" id="theme-toggle-dropdown"><i class="fa-solid fa-lightbulb"></i></a>
+        <!-- Dropdown nav theme toggle -->
         <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
       </div>
     </div>
-    
+
     </div>
   </nav>
   <!-- --------------------------------------------------------------------------------------------- -->
   <div class="Home" id="HomePage">
     <div class="main-container">
-      <div class="upper-section">
-        <lottie-player src="Avatar Animation.json" background="transparent" speed="1"
-            style="width: 300px; height: 300px;" loop autoplay>
+      <div class="upper-section"data-aos="fade-up" data-aos-delay="500">
+        <lottie-player src="./Animation/Avatar Animation.json" background="transparent" speed="1"
+          style="width: 300px; height: 300px;" loop autoplay>
         </lottie-player>
-    </div>
+      </div>
       <div class="content">
         <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Pratik Shalgar</span></h1>
-        
+
         <div class="status" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
           <span class="status-indicator"></span>
           <span>Available for projects</span>
@@ -108,12 +109,12 @@
 
       <!-- Image Section Starts -->
       <div class="imageSection" data-aos="zoom-in" data-aos-delay="400">
-        <img src="./img/img.jpg" alt="Profile Image">
+        <img src="./img/My_Photo.png" alt="Profile_Image">
       </div>
       <!-- Image Section Ends -->
 
       <!-- Info Section Starts -->
-      <div class="infoSection" data-aos="fade-right" data-aos-delay="500">
+      <div class="infoSection" data-aos="fade-right" data-aos-delay="400">
         <h1>About Me</h1>
         <h2>Fresher</h2>
         <p>I am a Computer Science professional with a strong background in software development, data science, machine
@@ -123,20 +124,20 @@
         <p>With hands-on experience from internships and projects, I specialize in data analysis, machine learning
           optimization, and web development. I am proficient in Python and SQL, and am always eager
           to learn and contribute to innovative tech solutions.</p>
-        <div class="personalInfo" data-aos="fade-up" data-aos-delay="600">
+        <div class="personalInfo" data-aos="fade-up" data-aos-delay="400">
           <div><span>Name:</span><span>Pratik Shalgar</span></div>
           <div><span>Age:</span><span>22 Years</span></div>
           <div><span>Email:</span><span>pratik.shalgar@gmail.com</span></div>
           <div><span>Address:</span><span>Navi Mumbai, Maharashtra</span></div>
         </div>
-        <div class="button" data-aos="zoom-in" data-aos-delay="700">
-          <button id="downloadBtn">Download CV</button>
+        <div class="button" data-aos="zoom-in" data-aos-delay="400">
+          <button id="downloadBtn_2">Download CV</button>
         </div>
       </div>
       <!-- Info Section Ends -->
 
       <!-- Skill Section Start -->
-      <div class="skillSection" data-aos="fade-up" data-aos-delay="800">
+      <div class="skillSection" data-aos="fade-up" data-aos-delay="500">
         <div class="skill">
           <div class="subject">Hard Work</div>
           <div class="progress_bar">
@@ -205,14 +206,10 @@
 
       <!--   *******  Experience Section Starts  *******  -->
 
-      <section class="col loader-section">
-        <lottie-player 
-                src="https://assets2.lottiefiles.com/packages/lf20_9wpyhdzo.json" 
-                background="transparent" 
-                speed="1" 
-                style="width: 300px; height: 300px;" 
-                loop autoplay>
-            </lottie-player>
+      <section class="col loader-section" data-aos="fade-up" data-aos-delay="200">
+        <lottie-player src="./Animation/2nd_animation.json" background="transparent" speed="1"
+          style="width: 300px; height:300px;" loop autoplay>
+        </lottie-player>
       </section>
 
 
@@ -275,10 +272,10 @@
         <div class="card-2" data-aos="fade-up" data-aos-duration="1200">
           <img src="./Certificate/TCR Innovation.png" alt="Card 2" class="img-card-2" />
         </div>
-        
+
       </div>
     </div>
-  
+
     <!-- Navigation Arrows inside certificate-slider -->
     <button class="left-arrow-unique" data-aos="fade-up" data-aos-duration="1000">◀</button>
     <button class="right-arrow-unique" data-aos="fade-up" data-aos-duration="1000">▶</button>
@@ -286,8 +283,8 @@
 
   <!-- ------------------------------------------------------------------------------------------------------------------ -->
 
-  <div class="projects-heading" id="MyProjects">
-    <h2 class="timeline-heading">Projects</h2>
+  <div class="projects-heading" data-aos="fade-up" data-aos-delay="500" id="MyProjects">
+    <h2 class="timeline-heading" >Projects</h2>
     <p>A showcase of my work using various technologies and frameworks.</p>
   </div>
 
@@ -327,7 +324,7 @@
         <h2>Project Name</h2>
       </div>
       <div class="project-skills-2">
-        <span>HTML</span>
+        <span >HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
         <span>React</span>

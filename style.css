@@ -355,7 +355,7 @@ nav {
 
 .hirebutton {
   width: 70%;
-  height: 6vh;
+  height: 40px;
   margin: 30px;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
@@ -401,11 +401,11 @@ nav {
       gap: 15px;
   }
 
-  .upper-section {
+  /* .upper-section {
       height: 250px;
 
       margin-top: 8%;
-  }
+  } */
 
   .content h2 {
       font-size: 1.5rem;
@@ -417,10 +417,10 @@ nav {
 }
 
 @media (max-width: 480px) {
-  .upper-section {
+  /* .upper-section {
       height: 200px;
       margin-top: 25%;
-  }
+  } */
 
   .content h2 {
       font-size: 1.2rem;
@@ -484,7 +484,10 @@ nav {
   object-fit: cover;
   position: relative;
   z-index: 2;
+  border: 2px solid black; /* Adds a black border */
 }
+
+
 
 .about_contents .imageSection::after {
   position: absolute;
@@ -734,7 +737,7 @@ main.row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* Two columns by default */
-  grid-column-gap: 20px;
+  
   /* Space between columns */
 }
 
@@ -756,11 +759,14 @@ main.row {
   text-transform: uppercase;
   position: relative;
 }
-
+.col{
+  height: 100%;
+  width: 90%;
+}
 .col .e_contents {
   padding: 0px 30px;
-  border-left: 2px solid var(--edu-light-gray);
-  /* Using light gray for borders */
+
+ 
 }
 
 .col .e_contents .box {
@@ -781,19 +787,7 @@ main.row {
   border: 1px solid transparent;
 }
 
-.col .e_contents .box::before {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  right: calc(100% + 22px);
-  top: 0;
-  background-color: var(--edu-education-blue);
-  /* Using the unique color variable */
-  border: 2px solid var(--edu-white);
-  /* Using white for the border */
-}
+
 
 .box h4 {
   position: relative;
@@ -816,81 +810,65 @@ main.row {
   font-size: 17px;
 }
 
-/* Responsive adjustments for screens below 992px */
-@media (max-width: 992px) {
-  section .edu {
-    margin-top: auto;
-    /* Keep sections aligned */
-  }
 
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
   main.row {
     grid-template-columns: 1fr;
-    /* Switch to single-column layout */
-    grid-row-gap: 30px;
-    /* Add space between rows */
-  }
-
-  .row .col:nth-child(2) {
-    margin-top: 30px;
-    /* Add spacing between About Me and Experience */
-  }
-
-  .edu_container {
-    padding: 20px 5%;
-    /* Adjust padding for smaller screens */
+    grid-row-gap: 20px;
   }
 
   .col .e_contents {
-    border-left: none;
-    /* Remove border for cleaner look */
     padding: 0;
-    /* Simplify padding for smaller screens */
+    border-left: none;
   }
 
   .col .e_contents .box {
     padding: 15px;
-    /* Reduce padding for better fit */
     margin-bottom: 15px;
-    /* Add consistent spacing */
   }
 
   .box h3 {
-    font-size: 17px;
-    /* Adjust font size */
+    font-size: 18px;
   }
 
   .box p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  main.row {
+    padding: 15px;
+  }
+
+  .edu_container {
+    padding: 15px 5%;
+  }
+
+  .box h3 {
+    font-size: 16px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col .e_contents .box {
+    padding: 10px;
+  }
+
+  .box h3 {
     font-size: 15px;
-    /* Adjust font size */
+  }
+
+  .box p {
+    font-size: 13px;
   }
 }
-
-@media (max-width: 992px) {
-  .edu {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 65px;
-    margin: 25px;
-  }
-}
-
-@media (max-width: 430px) {
-  .about-right {
-    background: var(--edu-box-background);
-    /* Using box background color */
-    color: var(--edu-black);
-    /* Using black color */
-    height: 51rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5rem;
-    text-align: center;
-  }
-}
-
 
 /* ----------------------------------------------------------------------- */
 :root {
@@ -1060,6 +1038,7 @@ main.row {
   gap: 20px;
   padding: 20px;
   opacity: 0;
+  width: 100%;
   /* Initially hidden */
   transform: translateY(50px);
   /* Start with a slight downward offset */
@@ -1091,8 +1070,10 @@ main.row {
 main.row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+
   /* Two columns by default */
-  grid-column-gap: 20px;
+  
   /* Space between columns */
 }
 
@@ -1104,7 +1085,7 @@ main.row {
 
 .col .e_contents {
   padding: 0px 30px;
-  border-left: 2px solid var(--edu-secondary-color);
+  
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.5s ease-in-out;
@@ -1152,75 +1133,15 @@ main.row {
   }
 }
 
-/* Loader Section Styling */
 .loader-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  /* Full height to match the section's size */
-  padding: 20px;
-  background-color: var(--edu-background-color);
-  /* Optional: set a background color for contrast */
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Ensures the section takes the full viewport height */
+  margin: 0; /* Removes default margin if any */
 }
 
-/* Loader Styling */
-.loader {
-  width: 200px;
-  height: 140px;
-  background: var(--edu-loader-background);
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 8px;
-  perspective: 1000px;
-}
 
-.loader:before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
-  border-radius: 8px;
-  background: var(--edu-loader-overlay) no-repeat;
-  background-size: 60px 10px;
-  background-image: linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0);
-  background-position: 15px 30px, 15px 60px, 15px 90px,
-    105px 30px, 105px 60px, 105px 90px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-}
-
-.loader:after {
-  content: '';
-  position: absolute;
-  width: calc(50% - 10px);
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
-  border-radius: 8px;
-  background: white no-repeat;
-  background-size: 60px 10px;
-  background-image: linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0),
-    linear-gradient(var(--edu-loader-gradient-color) 100px, transparent 0);
-  background-position: 50% 30px, 50% 60px, 50% 90px;
-  transform: rotateY(0deg);
-  transform-origin: left center;
-  animation: paging 1s linear infinite;
-}
-
-/* Paging Animation */
-@keyframes paging {
-  to {
-    transform: rotateY(-180deg);
-  }
-}
 
 
 
@@ -1427,10 +1348,10 @@ main.row {
 /* =----------------------------------------------------------------- */
 
 :root {
-  --footer-bg-color: #0f49d0;
-  --footer-text-color: #ffffff;
-  --footer-link-color: #d1e7ff;
-  --footer-link-hover-color: #ffffff;
+  --footer-bg-color:  #f4f4f4e4;
+  --footer-text-color:  #0f49d0 ;
+  --footer-link-color:  #000000;
+  --footer-link-hover-color: #0f49d0;
 }
 
 footer {
@@ -1526,9 +1447,9 @@ footer {
   --timeline-hover-color: rgba(15, 73, 208, 0.1);
   --timeline-dot-color: #0f49d0;
 
-  --timeline-color-dark: #0f49d0;  /* Example dark mode color */
-  --timeline-hover-color-dark: rgba(255, 204, 0, 0.1);  /* Dark mode hover color */
-  --timeline-dot-color-dark: #0f49d0;  /* Dark mode dot color */
+  --timeline-color-dark: #165cff;  /* Example dark mode color */
+  --timeline-hover-color-dark:  rgba(15, 73, 208, 0.804);  /* Dark mode hover color */
+  --timeline-dot-color-dark: #165cff;  /* Dark mode dot color */
 }
 body.dark-mode {
   /* Override root variables for dark mode */
@@ -1707,7 +1628,7 @@ h3 {
   --project-hover-color: #0056b3;
   --project-background-color: white;
   --project-shadow-color: rgba(0, 0, 0, 0.1);
-  --project-text-color: #333;
+  --project-text-color: #000000;
   --project-secondary-text-color: #555;
   --project-heading-color: #0f49d0;
 }
@@ -2455,111 +2376,115 @@ h3 {
   font-size: 20px;
   color: #000;
 }
+.project-github-2 .fa,.project-github .fa {
 
+  color: var(--project-text-color);
+
+}
 
 
 
 :root{
-/* Dark Mode */
-
---body-bg-color-dark: #121212; /* A darker shade for body background */
---body-text-color-dark: #E0E0E0; /* Slightly off-white for better readability */
-
-/* Navbar */
---nav-bg-color-dark: #1F1F1F; /* Darker but with some transparency */
---nav-text-color-dark: #FFFFFF; 
---nav-hover-color-dark: #1E90FF; /* A vibrant blue for hover effects */
---nav-border-color-dark: #333333; /* Dark gray border */
-
-/* Dropdown */
---dropdown-bg-color-dark: #292929; /* Soft dark background for dropdowns */
---dropdown-text-color-dark: #FFFFFF; 
---dropdown-hover-bg-color-dark: #1E90FF; /* Match with nav hover */
-
---primary-color-dark: #0f49d0;
---button-bg-color-dark: #0f49d0;
---button-text-color-dark: white;
---social-icon-border-dark: #0f49d0;
---social-icon-color-dark: #0f49d0;
---hover-social-icon-bg-dark: #0f49d0;
---hover-social-icon-color-dark: black;
---video-shadow-color-dark: rgba(0, 0, 0, 0.3);
---navbar-bg-color-dark: rgba(255, 255, 255, 0);
---navbar-hover-bg-color-dark: #0f49d0;
-
---about-primary-color-dark: #0f49d0;
---about-secondary-color-dark: #E0E0E0;
---about-accent-color-dark: #212121; /* Dark gray */
---about-hover-color-dark: #0f49d0;
---about-border-color-dark: #0f49d0;
---about-button-bg-color-dark: #0f49d0;
---about-button-text-color-dark: #FFFFFF;
---about-text-color-dark: #E0E0E0;
---about-highlight-color-dark: #FFD700;
-
---skill-education-blue-dark: #0f49d0;
---skill-light-gray-dark: #bababa;
---skill-box-border-dark: #eaeaea;
---skill-box-hover-shadow-dark: #ccc;
---skill-box-background-dark: #ffffff;
---skill-text-primary-dark: #444;
---skill-text-secondary-dark: #666;
---skill-white-dark: #ffffff;
---skill-black-dark: #000000;
-
---skill-dark-gray-dark: #c5c5c5;
-
---edu-education-blue-dark: #0f49d0;
---edu-light-gray-dark: #bababa;
---edu-box-border-dark: #eaeaea;
---edu-box-hover-shadow-dark: #ccc;
---edu-box-background-dark: #000000;
---edu-text-primary-dark: #ffffff;
---edu-text-secondary-dark: #ffffff;
---edu-white-dark: #000000;
---edu-black-dark: #ffffff;
-
---slider-primary-color-dark: #0f49d0;
---slider-secondary-color-dark: #ccc;
---slider-background-color-dark: white;
---slider-arrow-color-dark: #0f49d0;
---slider-arrow-bg-color-dark: rgba(15, 73, 208, 0);
---slider-hover-color-dark: #0f49d0;
---slider-box-shadow-dark: rgba(0, 0, 0, 0.3);
-
---edu-primary-color-dark: #0f49d0;
---edu-secondary-color-dark: #bababa;
---edu-background-color-dark: #121212;
---edu-text-color-dark: #000000;
---edu-loader-background-dark: #979794;
---edu-loader-overlay-dark: #f5f5f5;
---edu-loader-gradient-color-dark: #ddd;
-
---connect-heading-bg-color-dark: #121212;
---connect-heading-color-dark: #0f49d0;
---connect-text-color-dark: #ffffff;
---connect-link-color-dark: #0f49d0;
---connect-loader-border-color-dark: #3760C9 #96DDFC #96DDFC #36BBF7;
---connect-loader-gradient-color-dark: #0f49d0;
-
-
-
---project-primary-color-dark: #0f49d0;
---project-hover-color-dark: #0056b3;
---project-background-color-dark: rgb(0, 0, 0);
---project-shadow-color-dark: rgba(0, 0, 0, 0.352);
---project-text-color-dark: #ffffff;
---project-secondary-text-color-dark: #ffffff;
---project-heading-color-dark: #0f49d0;
-
-
-/* Footer */
---footer-bg-color-dark: #1F1F1F;
---footer-text-color-dark: #0f49d0;
---footer-link-color-dark: #FFFFFF;
---footer-link-hover-color-dark:  #0f49d0;
-
-}
+  /* Dark Mode */
+  
+  --body-bg-color-dark: #121212; /* A darker shade for body background */
+  --body-text-color-dark: #E0E0E0; /* Slightly off-white for better readability */
+  
+  /* Navbar */
+  --nav-bg-color-dark: #1F1F1F; /* Darker but with some transparency */
+  --nav-text-color-dark: #FFFFFF; 
+  --nav-hover-color-dark: #1E90FF; /* A vibrant blue for hover effects */
+  --nav-border-color-dark: #333333; /* Dark gray border */
+  
+  /* Dropdown */
+  --dropdown-bg-color-dark: #292929; /* Soft dark background for dropdowns */
+  --dropdown-text-color-dark: #FFFFFF; 
+  --dropdown-hover-bg-color-dark: #1E90FF; /* Match with nav hover */
+  
+  --primary-color-dark: #165cff;
+  --button-bg-color-dark: #165cff;
+  --button-text-color-dark: white;
+  --social-icon-border-dark: #165cff;
+  --social-icon-color-dark: #165cff;
+  --hover-social-icon-bg-dark: #165cff;
+  --hover-social-icon-color-dark: black;
+  --video-shadow-color-dark: rgba(0, 0, 0, 0.3);
+  --navbar-bg-color-dark: rgba(255, 255, 255, 0);
+  --navbar-hover-bg-color-dark: #165cff;
+  
+  --about-primary-color-dark: #165cff;
+  --about-secondary-color-dark: #E0E0E0;
+  --about-accent-color-dark: #212121; /* Dark gray */
+  --about-hover-color-dark: #165cff;
+  --about-border-color-dark: #165cff;
+  --about-button-bg-color-dark: #165cff;
+  --about-button-text-color-dark: #FFFFFF;
+  --about-text-color-dark: #E0E0E0;
+  --about-highlight-color-dark: #FFD700;
+  
+  --skill-education-blue-dark: #165cff;
+  --skill-light-gray-dark: #bababa;
+  --skill-box-border-dark: #eaeaea;
+  --skill-box-hover-shadow-dark: #ccc;
+  --skill-box-background-dark: #ffffff;
+  --skill-text-primary-dark: #444;
+  --skill-text-secondary-dark: #666;
+  --skill-white-dark: #1F1F1F;
+  --skill-black-dark: #000000;
+  
+  --skill-dark-gray-dark: #c5c5c5;
+  
+  --edu-education-blue-dark: #165cff;
+  --edu-light-gray-dark: #bababa;
+  --edu-box-border-dark: #eaeaea;
+  --edu-box-hover-shadow-dark: #ccc;
+  --edu-box-background-dark: #000000;
+  --edu-text-primary-dark: #ffffff;
+  --edu-text-secondary-dark: #ffffff;
+  --edu-white-dark: #000000;
+  --edu-black-dark: #ffffff;
+  
+  --slider-primary-color-dark: #165cff;
+  --slider-secondary-color-dark: #ccc;
+  --slider-background-color-dark: white;
+  --slider-arrow-color-dark: #165cff;
+  --slider-arrow-bg-color-dark: rgba(15, 73, 208, 0);
+  --slider-hover-color-dark: #165cff;
+  --slider-box-shadow-dark: rgba(0, 0, 0, 0.3);
+  
+  --edu-primary-color-dark: #165cff;
+  --edu-secondary-color-dark: #bababa;
+  --edu-background-color-dark: #121212;
+  --edu-text-color-dark: #000000;
+  --edu-loader-background-dark: #979794;
+  --edu-loader-overlay-dark: #f5f5f5;
+  --edu-loader-gradient-color-dark: #ddd;
+  
+  --connect-heading-bg-color-dark: #121212;
+  --connect-heading-color-dark: #165cff;
+  --connect-text-color-dark: #ffffff;
+  --connect-link-color-dark: #165cff;
+  --connect-loader-border-color-dark: #3760C9 #96DDFC #96DDFC #36BBF7;
+  --connect-loader-gradient-color-dark: #165cff;
+  
+  
+  
+  --project-primary-color-dark: #165cff;
+  --project-hover-color-dark: #0056b3;
+  --project-background-color-dark: rgb(0, 0, 0);
+  --project-shadow-color-dark: rgba(0, 0, 0, 0.352);
+  --project-text-color-dark: #ffffff;
+  --project-secondary-text-color-dark: #ffffff;
+  --project-heading-color-dark: #165cff;
+  
+  
+  /* Footer */
+  --footer-bg-color-dark: #0f0f0f;
+  --footer-text-color-dark: #165cff;
+  --footer-link-color-dark: #FFFFFF;
+  --footer-link-hover-color-dark:  #165cff;
+  
+  }
 body.dark-mode .logo img {
   content: url("./img/logo\ 2.png"); /* Image for dark mode */
 }
